@@ -1,11 +1,11 @@
 <template>
-    <div>designer</div>
+  <div>designer</div>
 </template>
 
 <script>
-    export default {
+  export default {
 
-    }
+  }
 </script>
 
 <style>
