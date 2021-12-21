@@ -22,7 +22,7 @@
         :pageModuleList="pageModuleList"
       /> -->
       <!-- 主体内容 -->
-      <el-container class="main-center-container" direction="vertical" v-if="reportDataIsAlready">
+      <el-container class="main-center-container" direction="vertical">
         <!-- <SubpageManage
           :globalConfig="globalConfig"
           :mainComponentList="mainComponentList"
@@ -39,6 +39,7 @@
             }
           "
         /> -->
+        <MobileDesignerContainer />
         <!-- <MobileWidgetContainer
           @mobileViewClick="onGoPageConfig"
           @onChangeComponentList="onChangeComponentList"
@@ -47,7 +48,7 @@
           :globalConfig="currentGlobalConfig"
         /> -->
       </el-container>
-      <el-container class="main-center-container" direction="vertical" v-else></el-container>
+      <!-- <el-container class="main-center-container" direction="vertical" v-else></el-container> -->
       <!-- 右侧组件配置栏 -->
       <ConfigPanel />
       <!-- <ComponentConfigPanel
@@ -73,12 +74,14 @@
   import DesignHeader from './layout/header/index.vue'
   import AsideMenu from './layout/aside-menu/index.vue'
   import ConfigPanel from './layout/config-panel/index.vue'
+  import MobileDesignerContainer from './mobile/index.vue'
   export default {
     name: 'Designer',
     components: {
       DesignHeader,
       AsideMenu,
-      ConfigPanel
+      ConfigPanel,
+      MobileDesignerContainer
     }
   }
 </script>
